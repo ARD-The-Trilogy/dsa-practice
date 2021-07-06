@@ -1,4 +1,4 @@
-# dsa-practice
+# DSA-Practice
 
 # Syllabus
 
