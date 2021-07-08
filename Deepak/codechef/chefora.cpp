@@ -4,9 +4,23 @@ typedef unsigned long long ull;
 typedef long long ll;
 using namespace std;
 
+int mod = 1e9 + 7;
+ll power(ll base, ll exp)
+{
+    ll res = 1;
+    while (exp > 0)
+    {
+        if (exp % 2 == 1)
+            res = (res * base) % mod;
+        exp = exp >> 1;
+        base = (base * base) % mod;
+    }
+    return res;
+}
+
 void calcChefora(set<ll> &chefora, string str, int len, int dist)
 {
-    if (chefora.size() < 1e5 + 1)
+    if (chefora.size() < 1e5)
     {
         int mid = len / 2;
         for (int i = 0; i <= 9; i++)
@@ -47,21 +61,39 @@ int main()
         calcChefora(chefora, str, len, 0);
     }
 
-    vector<int> vt;
+    chefora.insert(10000000001);
+    vector<ll> vt, prefix;
     for (auto it : chefora)
     {
         vt.push_back(it);
+        prefix.push_back(it);
     }
-    // vt.push_back(1000000001)
 
-    cout << *chefora.rbegin() << endl;
-
-    cout << chefora.size();
+    int size = vt.size();
+    // cout << size << endl;
+    // for (int i = size - 1; i >= size - 100; i--)
+    // {
+    //     cout << vt[i] << endl;
+    // }
 
     int q, l, r;
+
+    for (int i = 0; i < size; i++)
+    {
+        if (i == 0)
+            continue;
+        prefix[i] += prefix[i - 1];
+    }
+
     cin >> q;
+    int tot_powers = 0;
     while (q--)
     {
         cin >> l >> r;
+        tot_powers = prefix[r - 1];
+        tot_powers -= prefix[l - 1];
+
+        cout << vt[l - 1] << ' ' << tot_powers << endl;
+        cout << power(vt[l - 1], tot_powers) << endl;
     }
 }
