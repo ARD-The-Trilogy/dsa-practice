@@ -4,16 +4,17 @@ typedef unsigned long long ull;
 typedef long long ll;
 using namespace std;
 
-int mod = 1e9 + 7;
-ll power(ll base, ll exp)
+ll mod = 1e9 + 7;
+ll power(ll a, ll b)
 {
+    a %= mod;
     ll res = 1;
-    while (exp > 0)
+    while (b > 0)
     {
-        if (exp % 2 == 1)
-            res = (res * base) % mod;
-        exp = exp >> 1;
-        base = (base * base) % mod;
+        if (b & 1)
+            res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
     }
     return res;
 }
@@ -39,6 +40,19 @@ void calcChefora(set<ll> &chefora, string str, int len, int dist)
                 calcChefora(chefora, str, len, dist + 1);
         }
     }
+}
+
+bool isPalindrome(string str)
+{
+    if (str.length() % 2 == 0)
+        return false;
+    int len = str.length();
+    for (int i = 0, j = len - 1; i < j; i++, j--)
+    {
+        if (str[i] != str[j])
+            return false;
+    }
+    return true;
 }
 
 int main()
@@ -78,22 +92,22 @@ int main()
 
     int q, l, r;
 
-    for (int i = 0; i < size; i++)
+    prefix[0] = vt[0];
+    for (int i = 1; i < size; i++)
     {
-        if (i == 0)
-            continue;
-        prefix[i] += prefix[i - 1];
+        prefix[i] = vt[i] + prefix[i - 1];
     }
 
     cin >> q;
-    int tot_powers = 0;
+    ll tot_powers = 0;
     while (q--)
     {
         cin >> l >> r;
-        tot_powers = prefix[r - 1];
-        tot_powers -= prefix[l - 1];
+        l--, r--;
+        tot_powers = prefix[r];
+        tot_powers -= prefix[l];
 
-        cout << vt[l - 1] << ' ' << tot_powers << endl;
-        cout << power(vt[l - 1], tot_powers) << endl;
+        // cout << vt[l] << ' ' << tot_powers << endl;
+        cout << power(vt[l], tot_powers) << endl;
     }
 }
