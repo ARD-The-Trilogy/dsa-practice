@@ -4,9 +4,24 @@ typedef unsigned long long ull;
 typedef long long ll;
 using namespace std;
 
+ll mod = 1e9 + 7;
+ll power(ll a, ll b)
+{
+    a %= mod;
+    ll res = 1;
+    while (b > 0)
+    {
+        if (b & 1)
+            res = res * a % mod;
+        a = a * a % mod;
+        b >>= 1;
+    }
+    return res;
+}
+
 void calcChefora(set<ll> &chefora, string str, int len, int dist)
 {
-    if (chefora.size() < 1e5 + 1)
+    if (chefora.size() < 1e5)
     {
         int mid = len / 2;
         for (int i = 0; i <= 9; i++)
@@ -25,6 +40,19 @@ void calcChefora(set<ll> &chefora, string str, int len, int dist)
                 calcChefora(chefora, str, len, dist + 1);
         }
     }
+}
+
+bool isPalindrome(string str)
+{
+    if (str.length() % 2 == 0)
+        return false;
+    int len = str.length();
+    for (int i = 0, j = len - 1; i < j; i++, j--)
+    {
+        if (str[i] != str[j])
+            return false;
+    }
+    return true;
 }
 
 int main()
@@ -47,21 +75,39 @@ int main()
         calcChefora(chefora, str, len, 0);
     }
 
-    vector<int> vt;
+    chefora.insert(10000000001);
+    vector<ll> vt, prefix;
     for (auto it : chefora)
     {
         vt.push_back(it);
+        prefix.push_back(it);
     }
-    // vt.push_back(1000000001)
 
-    cout << *chefora.rbegin() << endl;
-
-    cout << chefora.size();
+    int size = vt.size();
+    // cout << size << endl;
+    // for (int i = size - 1; i >= size - 100; i--)
+    // {
+    //     cout << vt[i] << endl;
+    // }
 
     int q, l, r;
+
+    prefix[0] = vt[0];
+    for (int i = 1; i < size; i++)
+    {
+        prefix[i] = vt[i] + prefix[i - 1];
+    }
+
     cin >> q;
+    ll tot_powers = 0;
     while (q--)
     {
         cin >> l >> r;
+        l--, r--;
+        tot_powers = prefix[r];
+        tot_powers -= prefix[l];
+
+        // cout << vt[l] << ' ' << tot_powers << endl;
+        cout << power(vt[l], tot_powers) << endl;
     }
 }
