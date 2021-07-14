@@ -8,8 +8,8 @@ using namespace std;
 
 */
 
-// Memoization (bottom-up)
-int nth_fibonacci(vi &dp, int n){
+// Memoization (top-down)
+int fibonacciTD(vi &dp, int n){
   
   if(n == 0 || n == 1){
     dp[n] = 0;
@@ -18,13 +18,13 @@ int nth_fibonacci(vi &dp, int n){
     dp[n] = 1;
   }
   if(dp[n] == -1){
-    dp[n] = nth_fibonacci(dp, n-1) + nth_fibonacci(dp, n-2);
+    dp[n] = fibonacciTD(dp, n-1) + fibonacciTD(dp, n-2);
   }
   return dp[n];
 }
 
-// Tabulation (top-down)
-void fib(int n){
+// Tabulation (bottom-up)
+void fibonacciBU(int n){
   vi dp(n+1);
   dp[0] = 0;
   dp[1] = 0;
@@ -38,17 +38,15 @@ void fib(int n){
 
 int main(){
   int n = 10;
-  // cout<<"Enter n: ";
-  // cin>>n;
-
-  cout<<"Top-down: ";
-  fib(n);
-  
   vi dp(n+1, -1);
-  cout<<"\nBottom-Up: ";
+
+  cout<<"\nTop-down: ";
   for(int i=1; i<=n; i++){
-    cout<<nth_fibonacci(dp, i)<<' ';
+    cout<<fibonacciTD(dp, i)<<' ';
   }
+
+  cout<<"\nBottom-Up: ";
+  fibonacciBU(n);
   
   return 0;
 }
