@@ -50,7 +50,6 @@ void updateSal(int arr[], int n, int denom)
     }
 }
 
-// Check test cases by no 1, single 1, multiple 1.
 void solve()
 {
     int n;
@@ -63,10 +62,6 @@ void solve()
 
     int prefix_gcd[n], suffix_gcd[n];
     calc_gcd(arr, prefix_gcd, suffix_gcd, n);
-
-    // for (auto it : suffix_gcd)
-    //     cout << it << ' ';
-    // cout << endl;
 
     priority_queue<int, vector<int>, greater<int>> pq;
 
@@ -91,36 +86,26 @@ void solve()
         }
     }
 
-    int denomination = -1e9;
+    int curr = -1e9;
     idx = -1;
     while (!pq.empty())
     {
-        // cout << pq.top().first << ' ' << pq.top().second << endl;
-        denomination = max(denomination, pq.top());
+        curr = max(curr, pq.top());
         pq.pop();
     }
 
-    // cout << denomination << ' ';
-    updateSal(arr, n, denomination);
+    updateSal(arr, n, curr);
 
     ll tot = 0;
     for (int i = 0; i < n; i++)
     {
-        tot += arr[i] / denomination;
+        tot += arr[i] / curr;
     }
 
     cout << tot << endl;
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
     int t;
     cin >> t;
     while (t--)
@@ -129,54 +114,3 @@ int main()
     }
 }
 
-/* 
-INPUT:
-10
-
-2
-3 6
-
-
-3
-5 2 1
-
-3
-5 10 7
-
-
-3
-5 10 15
-
-3
-3 8 9
-
-3
-3 5 9
-
-
-2
-1 1 
-
-1 
-1
-
-
-5
-1 1 3 6 3
-
-4
-1 1 3 4
-
-OUTPUT:
-2
-4
-4
-4
-5
-5
-2
-1
-9
-6
-
-*/
