@@ -34,6 +34,6 @@ int main(){
   return 0;
 }
 
-
+// n = 8
 // Input array: 10 16 7 14 5 3 12 9
 // Output array: 4 7 2 6 1 0 5 3
