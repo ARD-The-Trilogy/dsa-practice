@@ -1,25 +1,30 @@
-# DSA-Practice
 
-[Must Do Coding Questions for Product Based Companies](https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/?ref=ghb)
+# DSA-PRACTICE
 
-[Curated List of Top 75 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
+## USEFUL LINKS
 
-[Leetcode Must Do Pattern](https://seanprashad.com/leetcode-patterns/)
+>* [Nishant Chahar Prep Guide](https://github.com/chaharnishant11/PlacmentPrepGuide)
+>
+>* [Must Do Coding Questions for Product Based Companies](https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/?ref=ghb)
+>
+>* [Sean Prasad: Leetcode Must Do Pattern](https://seanprashad.com/leetcode-patterns/)
+>
+>* [BLIND_75: List of Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU/)
+>
+>* [BLIND-75 Solutions: Youtube](https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf)
 
-[BLIND-75 Solutions Youtube](https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf)
+## CORE SUBJECTS
 
-## Theory Part
+>* [DBMS Roadmap](https://whimsical.com/dbms-roadmap-by-love-babbar-FmUi8ffVop33t3MmpVxPCo)  
+>* [OS Roadmap](https://whimsical.com/operating-system-cheatsheet-by-love-babbar-S9tuWBCSQfzoBRF5EDNinQ)  
+>* [OOPS Roadmap](https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw)  
+>* [CN Roadmap](https://whimsical.com/networking-cheatsheet-by-love-babbar-FcLExFDezehhfsbDPfZDBv) 
 
-- [DBMS Roadmap](https://whimsical.com/dbms-roadmap-by-love-babbar-FmUi8ffVop33t3MmpVxPCo)  
-- [OS Roadmap](https://whimsical.com/operating-system-cheatsheet-by-love-babbar-S9tuWBCSQfzoBRF5EDNinQ)  
-- [OOPS Roadmap](https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw)  
-- [CN Roadmap](https://whimsical.com/networking-cheatsheet-by-love-babbar-FcLExFDezehhfsbDPfZDBv) 
-
-
+## APTITUDE
+>* [GOLDMAN SACHS](https://www.indiabix.com/aptitude/questions-and-answers/)
 
 # Syllabus
-
-[Coding Ninja DSA Syllabua](https://www.codingninjas.com/courses/online-interview-preparation)
+[Coding Ninja DSA SyllabuS](https://www.codingninjas.com/courses/online-interview-preparation)
 
 ## Class 1-4
 
