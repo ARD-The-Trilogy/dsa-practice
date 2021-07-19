@@ -42,9 +42,6 @@ map<int, int> rview;
 
 
 void makeTree();
-void preOrderRec(Node *);
-void preOrderIterative();
-void inOrderRec(Node *);
 void levOrder();
 void inOrderIterative();
 void diagnoalSub(Node *root, int lev);
@@ -83,10 +80,6 @@ int main()
 #endif
 
     makeTree();
-    preOrderRec(root);
-    cout << endl;
-    preOrderIterative();
-
     levOrder();
     inOrderRec(root);
     cout << endl;
@@ -174,91 +167,7 @@ void makeTree()
     // Node7->left = Node2;
 }
 
-void preOrderRec(Node *temp)
-{
-    if (temp)
-    {
-        cout << temp->data << ' ';
-        preOrderRec(temp->left);
-        preOrderRec(temp->right);
-    }
-}
 
-void preOrderIterative()
-{
-    stack<Node *> stk; // for storing Nodes addreses;
-
-    stk.push(root);
-    while (!stk.empty())
-    {
-        Node *temp = stk.top();
-        stk.pop();
-        cout << temp->data << ' ';
-        if (temp->right)
-            stk.push(temp->right);
-        if (temp->left)
-            stk.push(temp->left);
-    }
-    cout << endl;
-}
-
-void inOrderRec(Node *temp)
-{
-    if (temp)
-    {
-        inOrderRec(temp->left);
-        cout << temp->data << ' ';
-        inOrderRec(temp->right);
-    }
-}
-
-void levOrder()
-{
-    queue<Node *> qu;
-    qu.push(root);
-    while (!qu.empty())
-    {
-        Node *temp = qu.front();
-        qu.pop();
-        cout << temp->data << ' ';
-
-        if (temp->left)
-            qu.push(temp->left);
-        if (temp->right)
-            qu.push(temp->right);
-    }
-    cout << endl;
-}
-
-void inOrderIterative()
-{
-    stack<Node *> stk;
-    stk.push(root);
-    stack<int> nums;
-
-    while (!stk.empty())
-    {
-        Node *temp = stk.top();
-        stk.pop();
-
-        if (temp->right)
-        {
-            stk.push(temp->right);
-        }
-
-        if (temp->left)
-        {
-            stk.push(temp->left);
-        }
-        else
-        {
-            cout << temp->data << ' ';
-            stk.pop();
-            if (temp->right)
-                stk.push(temp->right);
-        }
-    }
-}
 
 void diagnoalSub(Node *root, int lev)
 {

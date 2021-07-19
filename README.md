@@ -1,6 +1,8 @@
 
 # DSA-PRACTICE
 
+## PLACEMENT MATERIAL
+>* [GDrive Link](https://drive.google.com/drive/folders/1hknMRw-JwDiABPO_cjWimzJb8MaLJrnv?usp=sharing)
 ## USEFUL LINKS
 
 >* [Nishant Chahar Prep Guide](https://github.com/chaharnishant11/PlacmentPrepGuide)
