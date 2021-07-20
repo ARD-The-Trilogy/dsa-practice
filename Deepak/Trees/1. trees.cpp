@@ -81,7 +81,6 @@ int main()
 
     makeTree();
     levOrder();
-    inOrderRec(root);
     cout << endl;
 
     // inOrderIterative();
