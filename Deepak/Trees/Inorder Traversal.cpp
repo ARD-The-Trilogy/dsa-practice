@@ -1,3 +1,5 @@
+// LINK: 
+
 #include <bits/stdc++.h>
 #include "buildTree.h"
 #define endl '\n'
@@ -7,7 +9,6 @@ using namespace std;
 
 void inOrderRec(Node *);
 void inOrderIterative();
-
 
 int main()
 {
@@ -35,32 +36,42 @@ void inOrderRec(Node *temp)
     }
 }
 
-void inOrderIterative()
+// GFG Submission
+vector<int> inOrder(Node *root)
 {
-    stack<Node *> stk;
-    stk.push(root);
-    stack<int> nums;
+    //code here
+    vector<int> nums;
+    stack<Node *> vert, hori;
 
-    while (!stk.empty())
+    vert.push(root);
+    while (!vert.empty())
     {
-        Node *temp = stk.top();
-        stk.pop();
+        Node *tmp = vert.top();
+        vert.pop();
 
-        if (temp->right)
+        if (!tmp->left && !tmp->right)
         {
-            stk.push(temp->right);
+            nums.push_back(tmp->data);
         }
-
-        if (temp->left)
+        else if (!hori.empty() && tmp == hori.top())
         {
-            stk.push(temp->left);
+            nums.push_back(tmp->data);
+            hori.pop();
         }
         else
         {
-            cout << temp->data << ' ';
-            stk.pop();
-            if (temp->right)
-                stk.push(temp->right);
+
+            if (tmp->right)
+                vert.push(tmp->right);
+
+            vert.push(tmp);
+
+            if (tmp->left)
+                vert.push(tmp->left);
+
+            hori.push(tmp);
         }
     }
+
+    return nums;
 }

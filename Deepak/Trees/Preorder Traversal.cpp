@@ -1,3 +1,5 @@
+// Link: https://www.geeksforgeeks.org/iterative-preorder-traversal/
+
 #include <bits/stdc++.h>
 #include "buildTree.h"
 #define endl '\n'
@@ -34,20 +36,26 @@ void preOrderRec(Node *temp)
     }
 }
 
-void preOrderIterative()
+// Geeks Submission
+vector<int> preOrder(Node *root)
 {
-    stack<Node *> stk; // for storing Nodes addreses;
-
+    //code here
+    vector<int> nums;
+    stack<Node *> stk;
     stk.push(root);
     while (!stk.empty())
     {
-        Node *temp = stk.top();
+        Node *tmp_root = stk.top();
         stk.pop();
-        cout << temp->data << ' ';
-        if (temp->right)
-            stk.push(temp->right);
-        if (temp->left)
-            stk.push(temp->left);
+
+        nums.push_back(tmp_root->data);
+
+        if (tmp_root->right)
+            stk.push(tmp_root->right);
+
+        if (tmp_root->left)
+            stk.push(tmp_root->left);
     }
-    cout << endl;
+
+    return nums;
 }
