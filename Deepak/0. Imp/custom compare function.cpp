@@ -15,13 +15,6 @@ struct compr {
     bool operator()(const int &a, const int &b) {
         return a > b;
     }
-    void hello() {
-        cout << "hello";
-    }
-
-    void bef() {
-        cout << "bef";
-    }
 };
 
 int main()
