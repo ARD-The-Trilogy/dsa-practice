@@ -1,41 +1,19 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
+#include <bits/stdc++.h>
 using namespace std;
+
+int add(int a, int b){
+  void printSum(int a, int b);
+  printSum(a,b);
+  return a+b;
+}
+void printSum(int a, int b){
+  cout<<a+b<<endl;
+}
 
 int main()
 {
-    vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string &word : msg)
-    {
-        cout << word << " ";
-    }
-    cout << endl;
+  int a = 5, b = 10;
+  int sum = add(a, b);
+  cout<<"sum = "<<sum;
+  return 0;
 }
-
-
-
-
-
-
-
-
-
-
-// #include <bits/stdc++.h>
-// using namespace std;
-
-// int main(){
-// 	// #ifndef ONLINE_JUDGE
-// 	// 	freopen("input.txt", "r", stdin);
-// 	// 	freopen("output.txt", "w", stdout);
-// 	// #endif
-
-// 	int a,b;
-// 	cin>>a>>b;
-// 	cout<<a+b;
-	
-// 	return 0;
-// }

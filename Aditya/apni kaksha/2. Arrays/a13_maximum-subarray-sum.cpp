@@ -9,8 +9,8 @@ void maximum_subarray_sum(int arr[], int n) {
       curr_sum += arr[i];
     }
     else{
-      curr_sum = 0;
-    }
+      curr_sum = 0;       // wrong -> corrected below
+    }   // https://leetcode.com/problems/maximum-subarray/submissions/
     max_sum = max(max_sum, curr_sum);
   }
   cout<<max_sum;
