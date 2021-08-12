@@ -1,31 +1,40 @@
-
 # DSA-PRACTICE
 
 ## PLACEMENT MATERIAL
->* [GDrive Link](https://drive.google.com/drive/folders/1hknMRw-JwDiABPO_cjWimzJb8MaLJrnv?usp=sharing)
-## USEFUL LINKS
 
->* [Nishant Chahar Prep Guide](https://github.com/chaharnishant11/PlacmentPrepGuide)
+> - [GDrive Link](https://drive.google.com/drive/folders/1hknMRw-JwDiABPO_cjWimzJb8MaLJrnv?usp=sharing)
 >
->* [Must Do Coding Questions for Product Based Companies](https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/?ref=ghb)
+> - [Must do  Amazon, Microsoft Questions](https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/)
+## USEFUL LINKS
+> - [Interview Experiences](https://github.com/yash0530/InterviewPrepResources)
 >
->* [Sean Prasad: Leetcode Must Do Pattern](https://seanprashad.com/leetcode-patterns/)
+> - [Nishant Chahar Prep Guide](https://github.com/chaharnishant11/PlacmentPrepGuide)
 >
->* [BLIND_75: List of Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU/)
+> - [Must Do Coding Questions for Product Based Companies](https://www.geeksforgeeks.org/must-do-coding-questions-for-product-based-companies/?ref=ghb)
 >
->* [BLIND-75 Solutions: Youtube](https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf)
+> - [Sean Prasad: Leetcode Must Do Pattern](https://seanprashad.com/leetcode-patterns/)
+>
+> - [BLIND_75: List of Top 100 LeetCode Questions](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU/)
+>
+> - [BLIND-75 Solutions: Youtube](https://www.youtube.com/playlist?list=PLot-Xpze53ldVwtstag2TL4HQhAnC8ATf)
+>
+> - [Leetcode Company Wise](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise)
 
 ## CORE SUBJECTS
 
->* [DBMS Roadmap](https://whimsical.com/dbms-roadmap-by-love-babbar-FmUi8ffVop33t3MmpVxPCo)  
->* [OS Roadmap](https://whimsical.com/operating-system-cheatsheet-by-love-babbar-S9tuWBCSQfzoBRF5EDNinQ)  
->* [OOPS Roadmap](https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw)  
->* [CN Roadmap](https://whimsical.com/networking-cheatsheet-by-love-babbar-FcLExFDezehhfsbDPfZDBv) 
+> - [DBMS Roadmap](https://whimsical.com/dbms-roadmap-by-love-babbar-FmUi8ffVop33t3MmpVxPCo)
+> - [OS Roadmap](https://whimsical.com/operating-system-cheatsheet-by-love-babbar-S9tuWBCSQfzoBRF5EDNinQ)
+> - [OOPS Roadmap](https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw)
+> - [CN Roadmap](https://whimsical.com/networking-cheatsheet-by-love-babbar-FcLExFDezehhfsbDPfZDBv)
 
 ## APTITUDE
->* [GOLDMAN SACHS](https://www.indiabix.com/aptitude/questions-and-answers/)
+
+> - [India Bix Aptitude](https://www.indiabix.com/aptitude/questions-and-answers/)
+> 
+> -[5 Minutes Engineering](https://www.youtube.com/playlist?list=PLYwpaL_SFmcBpa1jwpCbEDespCRF3UPE5)
 
 # Syllabus
+
 [Coding Ninja DSA SyllabuS](https://www.codingninjas.com/courses/online-interview-preparation)
 
 ## Class 1-4

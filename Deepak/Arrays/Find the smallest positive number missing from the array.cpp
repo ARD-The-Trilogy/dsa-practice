@@ -22,28 +22,64 @@ public:
     //Function to find the smallest positive number missing from the array.
 
     // Method 1 O(N) space
+    // int missingNumber(int arr[], int n)
+    // {
+    //     // Your code here
+    //     bool visited[n + 2];
+    //     memset(visited, 0, sizeof visited);
+
+    //     int mini = 1e7;
+    //     for (int i = 0; i < n; i++)
+    //     {
+    //         if (arr[i] > 0)
+    //         {
+    //             mini = min(mini, arr[i]);
+    //             visited[arr[i]] = true;
+    //         }
+    //     }
+
+    //     for (int i = mini;; i++)
+    //     {
+
+    //         if (visited[i] == false)
+    //             return i;
+    //     }
+    // }
+
+    bool isValid(int num, int n)
+    {
+        if (num < 1 || num > n)
+            return false;
+        return true;
+    }
     int missingNumber(int arr[], int n)
     {
         // Your code here
-        bool visited[n + 2];
-        memset(visited, 0, sizeof visited);
-
-        int mini = 1e7;
         for (int i = 0; i < n; i++)
         {
-            if (arr[i] > 0)
+            int num = arr[i];
+            for (; isValid(num, n) && arr[num - 1] != num;)
             {
-                mini = min(mini, arr[i]);
-                visited[arr[i]] = true;
+                int tmp = arr[num - 1];
+                arr[num - 1] = num;
+
+                num = tmp;
             }
         }
 
-        for (int i = mini;; i++)
+        int ans = INT_MAX;
+        for (int i = 1; i <= n; i++)
         {
-
-            if (visited[i] == false)
-                return i;
+            // cout << arr[i - 1] << ' ';
+            if (arr[i - 1] != i)
+            {
+                ans = min(ans, i);
+            }
         }
+
+        if (ans == INT_MAX)
+            ans = n + 1;
+        return ans;
     }
 };
 
